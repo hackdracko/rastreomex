@@ -1,0 +1,80 @@
+<div class="page-wrapper">
+    <div *ngIf="loader" class="preloader">
+        <div class="inner">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+<section id="topbar-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 topbar-base-2 no-padding">
+                <div class="col-sm-8 col-md-8 col-12 topbar-block left text-left tbleftalign">
+                    <ul>
+                        <li><a href="tel:+525579463853"><i class="fa fa-phone"></i>+52 5579463853</a> </li>
+                        <li><a href="mailto:rastreomex@gmail.com"><i class="fa fa-envelope"></i>rastreomex@gmail.com</a> </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-4 col-12 topbar-block text-right tbleftalign">
+                    <!-- <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-twitter"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i> </a> </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i> </a> </li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>		
+    <div class="hearder_area">
+        <div id="header_sticky_2" class="mainmenu_area_2">
+            <div class="container">
+                <div class="row header-bg">
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-10">
+                        <div class="logo">
+                            <a href="#" (click)="scrollTo('home')" aria-label="Rastreomex - Inicio">
+                                <img src="./assets/img/logo/logo1.svg" alt="Rastreomex - Rastreo satelital GPS" width="160" height="40" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-2 col-sm-2 text-right">
+                        <div class="mainmenu_2">
+                            <ul id="nav">
+                                <li>
+                                    <div (click)="scrollTo('home')">Inicio</div>
+                                </li>
+                                <li>
+                                    <div (click)="scrollTo('aboutus')">Sobre nosotros</div>
+                                </li>
+                                <li>
+                                    <div (click)="scrollTo('servicios')">Servicios</div>
+                                </li>
+                                <li>
+                                    <div (click)="scrollTo('prices')">Precios</div>
+                                </li>
+                                <li>
+                                    <div (click)="scrollTo('faq')">Preguntas frecuentes</div>
+                                </li>
+                                <li>
+                                    <div (click)="scrollTo('contactus')">Contáctanos</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-10 text-right">
+                        <div class="header-btn">
+                            <div (click)="scrollTo('prices')">Ver Planes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
