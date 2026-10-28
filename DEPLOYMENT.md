@@ -64,14 +64,30 @@ necesidad de dominio propio, suficiente para que el equipo revise el sitio.
 
 ---
 
-## Etapa 1 — Infraestructura de hosting 🔄 en curso (Cloudflare Pages)
+## Etapa 1 — Infraestructura de hosting ✅ hecho (Cloudflare)
 
-1. Entrar a Cloudflare → Pages → conectar el repo de GitHub
+1. ~~Entrar a Cloudflare → Pages → conectar el repo de GitHub~~ ✅
    (`hackdracko/rastreomex`).
-2. Build command: `npm run prerender`
-   Output directory: `dist/rastreomex/browser`
-3. Listo — Cloudflare detecta cada push a `master` y hace el deploy solo.
-   Esto reemplaza toda la Etapa 3 (CI/CD) de una vez.
+2. ~~Build command: `npm run prerender` · Output directory:
+   `dist/rastreomex/browser`~~ ✅
+3. Cloudflare detecta cada push a `master` y hace el deploy solo. Esto
+   reemplaza toda la Etapa 3 (CI/CD) de una vez. ✅
+
+**Sitio en vivo (revisión interna):**
+**https://rastreomex.roman-jimenez-estrada.workers.dev/**
+
+> Nota: el proyecto quedó configurado como **Workers** (la plataforma
+> unificada de Cloudflare), no como "Pages" clásico — por eso la URL es
+> `*.workers.dev` en vez de `*.pages.dev` como se anticipaba en este plan.
+> Funciona igual (mismo CDN, mismo deploy automático en cada push); solo
+> cambia el nombre del dominio gratuito. Hubo que agregar `wrangler.toml`
+> en la raíz del repo para que Cloudflare sirva el sitio como archivos
+> estáticos — sin ese archivo, intentaba auto-configurar el proyecto
+> asumiendo Angular 19+ (este proyecto usa Angular 16) y el deploy fallaba.
+
+Verificado: `robots.txt`, `sitemap.xml`, imágenes y CSS cargan con
+status 200. El contenido corresponde a la versión actual (Plan Plataforma
+Propia, carrusel de precios, header nuevo, teléfono corregido).
 
 ---
 
@@ -109,12 +125,13 @@ rama/PR antes de llegar a producción (gratis, viene incluido).
 
 ---
 
-## Etapa 4 — Verificación ⬜
+## Etapa 4 — Verificación 🔄 en curso
 
-### Ahora (revisión interna por `*.pages.dev`)
+### Ahora (revisión interna)
 
-- [ ] Compartir la URL `rastreomex.pages.dev` con las personas que van a
-      revisar el sitio.
+- [x] Sitio en línea y verificado (robots.txt, sitemap.xml, imágenes, CSS
+      — todo status 200): **https://rastreomex.roman-jimenez-estrada.workers.dev/**
+- [ ] Compartir la URL con las personas que van a revisar el sitio.
 - [ ] Probar en un celular real: menú hamburguesa, carrusel de precios,
       botones de WhatsApp (que abran con el número correcto).
 - [ ] Juntar el feedback del equipo antes de comprar el dominio y anunciar
