@@ -1,0 +1,57 @@
+/* El span "Rastreo Satelital GPS" es azul marino (#1d4e89) igual que el
+   fondo del hero (foto nocturna en tonos azules), se perdia casi por completo.
+   Lo paso a dorado para que resalte sobre la foto oscura. */
+.slider-content-two h1 span {
+  color: #d7a93f;
+}
+
+/* Fondo "centro de control" para Quienes somos; el titulo/intro quedan
+   sobre la foto (texto claro), las tarjetas blancas no cambian porque
+   tienen su propio fondo. */
+#aboutus {
+  background: linear-gradient(180deg, rgba(7, 18, 36, 0.8), rgba(7, 18, 36, 0.9)), url(/assets/img/slider/bg2.jpg) center top / cover no-repeat;
+}
+
+#aboutus .section-title-s1 h2 {
+  color: #fff;
+}
+
+#aboutus .section-title-s1 p {
+  color: #d7deea;
+}
+
+/* El theme fuerza Mayuscula En Cada Palabra via text-transform:capitalize;
+   por eso la correccion de mayusculas en el texto fuente no se veia. */
+.generating-cap h4 {
+  text-transform: none;
+}
+
+/* El icono venia sin fondo (circulo transparente) y mas grande que su
+   propia caja, se veia "a medias" junto a los iconos con badge de Contacto. */
+.generating-icon i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: 26px;
+  background: rgba(29, 78, 137, 0.08);
+}
+
+.single-generating:hover .generating-icon i {
+  background: #1d4e89;
+  color: #fff;
+}
+
+/* El theme fija padding:35px 50px en .single-generating sin importar el
+   ancho de pantalla, lo que desborda el contenido en moviles pequenos
+   (<=375px) con textos largos como "Plataforma Intuitiva Y Multidispositivo". */
+@media (max-width: 575px) {
+  .single-generating {
+    padding: 25px 20px;
+  }
+
+  .generating-cap {
+    padding-left: 16px;
+  }
+}

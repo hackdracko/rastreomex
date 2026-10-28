@@ -1,0 +1,268 @@
+/* El theme pone telefono y correo como <li> inline-block lado a lado;
+   en pantallas muy angostas (<=375px) no caben y el correo se corta. */
+@media (max-width: 430px) {
+  #topbar-2 ul li {
+    display: block;
+    border-right: none;
+    padding: 2px 4px;
+  }
+}
+
+/* ===== Header reconstruido (sin jQuery/slicknav) =====
+   El menu movil del theme (slicknav) insertaba el boton fuera de su
+   columna via jQuery, quedaba pegado a "Ver Planes" y no se podia alinear
+   de forma confiable en ningun ancho. Esto es un header propio en Angular,
+   flexbox puro, con su propio toggle de menu. */
+.site-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  z-index: 999;
+  background: #fff;
+}
+
+.site-header-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 4px;
+}
+
+.site-nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: #1d4e89;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.site-nav-toggle:hover {
+  background: #153a66;
+}
+
+.site-nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.site-nav-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.site-nav-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.site-nav-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav-links a {
+  color: #2b2b2b;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.site-nav-links a:hover {
+  color: #1d4e89;
+}
+
+.site-nav-cta {
+  display: inline-block;
+  background: #1d4e89;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.site-nav-cta:hover {
+  background: #153a66;
+  color: #fff;
+}
+
+/* ---- Responsive: menu hamburguesa por debajo de 992px ---- */
+@media (max-width: 991px) {
+  .site-nav-toggle {
+    display: flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: #fff;
+    box-shadow: 0 16px 32px rgba(7, 18, 36, 0.18);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.25s ease;
+  }
+
+  .site-nav.is-open {
+    max-height: 560px;
+    opacity: 1;
+  }
+
+  .site-nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 24px;
+  }
+
+  .site-nav-links li {
+    border-bottom: 1px solid #eef0f5;
+  }
+
+  .site-nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .site-nav-links a {
+    display: block;
+    padding: 14px 0;
+  }
+
+  .site-nav-cta {
+    display: block;
+    margin: 12px 24px 20px;
+    text-align: center;
+  }
+}
+
+/* Loader: pin de GPS con pulso de radar, en vez de las barritas genericas
+   del theme (ademas color #7ecbe4 que no es de la marca). */
+.preloader {
+  background-color: #0b1f3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gps-loader {
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+/* El logo (logo_ubicacion.svg) trae fondo gris claro solido, no
+   transparente; en vez de recortarlo (se ve sucio en los bordes) lo
+   mostramos en una medalla circular, mismo patron de badges que ya usa
+   el resto del sitio para iconos. */
+.gps-pin-badge {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35), 0 0 0 3px #d7a93f;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* ".preloader span" (bisness-style.css) trae una animacion vieja que
+     anima height/transform en CUALQUIER span dentro de .preloader; sin
+     esto le gana a los estilos de arriba sin importar especificidad. */
+  animation: none;
+}
+
+.gps-pin-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Arranca del tamano del badge (64px) hacia afuera; si empieza mas chico
+   que el badge, el aro queda tapado por el (opaco) la mayor parte del ciclo. */
+.gps-ping {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  margin: -35px 0 0 -35px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #d7a93f;
+  opacity: 0;
+  animation: gps-ping-animation 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.gps-ping-delay {
+  animation-delay: 1s;
+}
+
+@keyframes gps-ping-animation {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.gps-loader-text {
+  margin-top: 36px;
+  color: #d7deea;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}

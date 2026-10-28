@@ -1,0 +1,25 @@
+/* Mismo tratamiento que en "Quienes somos": icono con badge circular en
+   vez del glifo suelto (mas grande que su propia caja) que traia el theme. */
+.service-icon i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: 26px;
+  background: rgba(29, 78, 137, 0.08);
+}
+
+/* El hover real lo dispara .grid (fondo casi negro), no .item */
+.grid:hover .service-icon i {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* El theme deja una foto de stock (service-grid-1bg.jpg, alguien con laptop)
+   como fondo de TODAS las tarjetas al hacer hover, sobreescribiendo el
+   overlay oscuro que si tiene sentido. Quitamos la imagen. */
+.services-section .grid:hover {
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.95);
+}

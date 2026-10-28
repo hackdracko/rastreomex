@@ -1,3 +1,31 @@
 .show-footer {
     position: relative;
 }
+
+/* Lista de contacto propia: .footer-menu es de la plantilla (2 columnas,
+   solo colorea <div>), aqui son <a>/texto plano en una sola columna. */
+.footer-contact-list {
+  padding: 0;
+  margin: 10px 0 0;
+  list-style: none;
+}
+
+.footer-contact-list li {
+  color: #cccccc;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.footer-contact-list a {
+  color: #cccccc;
+  transition: color 0.3s;
+}
+
+.footer-contact-list a:hover {
+  color: #ffffff;
+}
+
+.footer-contact-list i {
+  width: 18px;
+  color: #1d4e89;
+}

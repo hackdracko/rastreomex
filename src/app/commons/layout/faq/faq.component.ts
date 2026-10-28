@@ -14,7 +14,7 @@ export class FaqComponent {
     },
     {
       question: '¿Cuánto cuesta un rastreador GPS en México con Rastreomex?',
-      answer: 'El Plan Tradicional para autos y motos particulares tiene un costo de $4,200 MXN. Para flotillas empresariales (Plan Empresarial) y flotas de vehículos pesados (Plan Avanzado) la cotización se ajusta al número de unidades, por lo que se maneja precio personalizado.'
+      answer: 'El Plan Tradicional para autos y motos particulares tiene un costo de $5,000 MXN. Para flotillas empresariales (Plan Empresarial), flotas de vehículos pesados (Plan Avanzado) y plataformas propias para empresas (Plan Plataforma Propia) la cotización se ajusta a las necesidades del negocio, por lo que se maneja precio personalizado.'
     },
     {
       question: '¿Rastreomex da servicio para motos, autos y tráileres?',
@@ -27,6 +27,10 @@ export class FaqComponent {
     {
       question: '¿Qué incluye una geocerca en el rastreo GPS?',
       answer: 'Una geocerca es un perímetro virtual que defines en el mapa. Si el vehículo entra o sale de esa zona, la plataforma envía una alerta automática, útil para control de rutas y seguridad.'
+    },
+    {
+      question: '¿Puedo descargar o exportar mis reportes?',
+      answer: 'Sí, puedes exportar tus reportes de viajes e historial a Excel. El tiempo de historial disponible depende del plan contratado: 1 mes en el Plan Tradicional y Empresarial, extendido en el Plan Avanzado y el Plan Plataforma Propia.'
     }
   ];
 

@@ -35,7 +35,6 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/styles/font-awesome.min.css",
               "src/assets/styles/line-awesome.css",
-              "src/assets/styles/slicknav.css",
               "src/assets/styles/normalize.css",
               "src/assets/styles/bisness-style.css",
               "src/assets/styles/bisness-responsive.css",
@@ -46,7 +45,6 @@
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "src/assets/js/jquery.scrollUp.min.js",
-              "src/assets/js/jquery.slicknav.min.js",
               "src/assets/js/bisness-main.js"
             ]
           },
@@ -60,8 +58,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "8kb"
                 }
               ],
               "outputHashing": "all"

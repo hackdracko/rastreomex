@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   public loader: boolean;
+  public menuOpen = false;
 
   constructor(private viewportScroller: ViewportScroller) {
     this.loader = true;
@@ -21,8 +22,12 @@ export class HeaderComponent {
     }, 2000);
   }
 
+  public toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
   public scrollTo(elementId: string): void {
-    console.log('Goto: ' + elementId);
+    this.menuOpen = false;
     this.viewportScroller.scrollToAnchor(elementId);
   }
 

@@ -1,15 +1,6 @@
 (function ($) {
 "use strict";
 
-/* slicknav_menu */
-$(document).ready(function(){
-	$('#nav').slicknav();
-	$(".slicknav_menu").appendTo(".mainmenu_area");
-	$(".slicknav_menu").appendTo(".mainmenu_area_2");
-	$(".slicknav_menu").appendTo(".mainmenu_area_3");
-});
-
-
 /* header_sticky */
  $(window).on('scroll',function() {
    var scroll = $(window).scrollTop();
@@ -59,8 +50,6 @@ $.scrollUp({
     }
   );
 
-
-$('.preloader').delay(1000).fadeOut(500);
 
   /* Scrolling Effect js */
 	// Select all links with hashes

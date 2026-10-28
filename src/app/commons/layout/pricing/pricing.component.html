@@ -5,66 +5,117 @@
                 <span>Nuestros precios</span>
                 <h2>Planes y precios a la medida</h2>
             </div>
-            <div class="row justify-content-between">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 pricing-custom equal">
-                    <div class="pricing-wrapper text-center mb-30">
-                        <div class="pricing-top">
-                            <h4>Plan Tradicional</h4>
+
+            <div id="pricingCarousel" class="carousel slide carousel-dark pricing-carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#pricingCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Plan Tradicional"></button>
+                    <button type="button" data-bs-target="#pricingCarousel" data-bs-slide-to="1" aria-label="Plan Empresarial"></button>
+                    <button type="button" data-bs-target="#pricingCarousel" data-bs-slide-to="2" aria-label="Plan Avanzado"></button>
+                    <button type="button" data-bs-target="#pricingCarousel" data-bs-slide-to="3" aria-label="Plan Plataforma Propia"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="pricing-slide mx-auto">
+                            <div class="pricing-wrapper text-center mb-30">
+                                <div class="pricing-top">
+                                    <h4>Plan Tradicional</h4>
+                                </div>
+                                <div class="pricing-text">
+                                    <h1><span>$</span>5,000</h1>
+                                </div>
+                                <ul class="pricing-menu">
+                                    <li>Motos y autos particulares.</li>
+                                    <li>Rastreo en tiempo real, alertas de movimiento y parada, geocercas básicas.</li>
+                                    <li>Proveer seguridad y control para usuarios individuales.</li>
+                                    <li>1 mes de historial.</li>
+                                </ul>
+                                <div class="pricing-button">
+                                    <a href="https://wa.me/5215572414206?text=Hola%21%20Quisiera%20cotizar%20el%20Plan%20Tradicional." target="_blank" rel="noopener">Cotizar</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="pricing-text">
-                            <h1><span>$</span>4200</h1>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="pricing-slide mx-auto">
+                            <div class="pricing-wrapper active text-center mb-30">
+                                <span class="pricing-badge">Más popular</span>
+                                <div class="pricing-top">
+                                    <h4>Plan Empresarial</h4>
+                                </div>
+                                <div class="pricing-text pricing-text-custom">
+                                    <h1>Cotización personalizada</h1>
+                                </div>
+                                <ul class="pricing-menu">
+                                    <li>Pequeñas y medianas empresas con flotas de autos o camionetas.</li>
+                                    <li>Todo lo del Plan Tradicional, más gestión de múltiples vehículos, reportes de eficiencia y alertas personalizadas de uso.</li>
+                                    <li>Mejorar la eficiencia y seguridad en la gestión de vehículos de flotas pequeñas y medianas.</li>
+                                    <li>1 mes de historial.</li>
+                                    <li>Descuentos por volumen.</li>
+                                </ul>
+                                <div class="pricing-button active">
+                                    <a href="https://wa.me/5215572414206?text=Hola%21%20Quisiera%20cotizar%20el%20Plan%20Empresarial." target="_blank" rel="noopener">Cotizar</a>
+                                </div>
+                            </div>
                         </div>
-                        <ul class="pricing-menu">
-                            <li>Motos y autos particulares.</li>
-                            <li>Rastreo en tiempo real, historial de rutas de los últimos 30 días, alertas de movimiento y parada, geocercas básicas.</li>
-                            <li>Proveer seguridad y control para usuarios individuales.</li>
-                            <li>1 mes de historial.</li>
-                        </ul>
-                        <div class="pricing-button">
-                            <a href="https://wa.me/5215579463853?text=Hola%21%20Quisiera%20cotizar%20el%20Plan%20Tradicional." target="_blank" rel="noopener">Cotizar</a>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="pricing-slide mx-auto">
+                            <div class="pricing-wrapper text-center mb-30">
+                                <div class="pricing-top">
+                                    <h4>Plan Avanzado</h4>
+                                </div>
+                                <div class="pricing-text pricing-text-custom">
+                                    <h1>Cotización personalizada</h1>
+                                </div>
+                                <ul class="pricing-menu">
+                                    <li>Empresas con flotas grandes de vehículos pesados, como tráileres y camiones.</li>
+                                    <li>Todo lo del Plan Empresarial, además de informes detallados de rendimiento, soporte prioritario y opciones de personalización avanzada de reportes.</li>
+                                    <li>Optimizar la operación de flotas grandes y proporcionar análisis detallados para la toma de decisiones estratégicas.</li>
+                                    <li>A convenir (historial extendido según necesidades de la empresa).</li>
+                                    <li>Con opciones de configuración avanzada.</li>
+                                </ul>
+                                <div class="pricing-button">
+                                    <a href="https://wa.me/5215572414206?text=Hola%21%20Quisiera%20cotizar%20el%20Plan%20Avanzado." target="_blank" rel="noopener">Cotizar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="pricing-slide mx-auto">
+                            <div class="pricing-wrapper text-center mb-30">
+                                <div class="pricing-top">
+                                    <h4>Plan Plataforma Propia</h4>
+                                </div>
+                                <div class="pricing-text pricing-text-custom">
+                                    <h1>Cotización personalizada</h1>
+                                </div>
+                                <ul class="pricing-menu">
+                                    <li>Empresas que quieren su propia plataforma de rastreo GPS, con marca, dominio y base de datos exclusivos.</li>
+                                    <li>Ideal para uso interno de flotillas grandes o para negocios que quieren ofrecer rastreo GPS a sus propios clientes bajo su marca.</li>
+                                    <li>Incluye instalación, configuración inicial, personalización (logo, colores, dominio propio) y capacitación a tu equipo.</li>
+                                    <li>Administración de usuarios, roles y permisos a la medida de tu organización.</li>
+                                    <li>Historial y retención de datos según la infraestructura contratada.</li>
+                                </ul>
+                                <div class="pricing-button">
+                                    <a href="https://wa.me/5215572414206?text=Hola%21%20Quisiera%20cotizar%20el%20Plan%20Plataforma%20Propia." target="_blank" rel="noopener">Cotizar</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 pricing-custom equal">
-                    <div class="pricing-wrapper active text-center mb-30">
-                        <div class="pricing-top">
-                            <h4>Plan Empresarial</h4>
-                        </div>
-                        <div class="pricing-text pricing-text-custom">
-                            <h1>Cotización personalizada</h1>
-                        </div>
-                        <ul class="pricing-menu">
-                            <li>Pequeñas y medianas empresas con flotas de autos o camionetas.</li>
-                            <li>Todo lo del Plan Tradicional, más gestión de múltiples vehículos, reportes de eficiencia y alertas personalizadas de uso.</li>
-                            <li>Mejorar la eficiencia y seguridad en la gestión de vehículos de flotas pequeñas y medianas.</li>
-                            <li>1 mes de historial.</li>
-                            <li>Descuentos por volumen.</li>
-                        </ul>
-                        <div class="pricing-button active">
-                            <a href="https://wa.me/5215579463853?text=Hola%21%20Quisiera%20cotizar%20el%20Plan%20Empresarial." target="_blank" rel="noopener">Cotizar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 pricing-custom equal">
-                    <div class="pricing-wrapper text-center mb-30">
-                        <div class="pricing-top">
-                            <h4>Plan Avanzado</h4>
-                        </div>
-                        <div class="pricing-text pricing-text-custom">
-                            <h1>Cotización personalizada</h1>
-                        </div>
-                        <ul class="pricing-menu">
-                            <li>Empresas con flotas grandes de vehículos pesados, como tráileres y camiones.</li>
-                            <li>Todo lo del Plan Empresarial, además de informes detallados de rendimiento, soporte prioritario y opciones de personalización avanzada de reportes.</li>
-                            <li>Optimizar la operación de flotas grandes y proporcionar análisis detallados para la toma de decisiones estratégicas.</li>
-                            <li>A convenir (historial extendido según necesidades de la empresa).</li>
-                            <li>Con opciones de configuración avanzada.</li>
-                        </ul>
-                        <div class="pricing-button">
-                            <a href="https://wa.me/5215579463853?text=Hola%21%20Quisiera%20cotizar%20el%20Plan%20Avanzado." target="_blank" rel="noopener">Cotizar</a>
-                        </div>
-                    </div>
-                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#pricingCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#pricingCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
         </div>
     </div>

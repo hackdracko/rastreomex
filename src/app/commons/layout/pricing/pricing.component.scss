@@ -1,4 +1,127 @@
+/* Fondo de instalacion GPS para la seccion de precios; mismo tratamiento
+   que Quienes somos (overlay oscuro + texto claro, tarjetas blancas
+   flotando encima). */
+#prices .pricing-area {
+  background: linear-gradient(180deg, rgba(7, 18, 36, 0.82), rgba(7, 18, 36, 0.9)), url(/assets/img/slider/bg3.jpg) center / cover no-repeat;
+}
+
+#prices .section-title-s3 > span {
+  color: #d7a93f;
+}
+
+#prices .section-title-s3 h2 {
+  color: #fff;
+}
+
 .pricing-text-custom h1 {
   font-size: 22px;
   line-height: 32px;
+}
+
+/* Alto fijo para que el carrusel no "salte" al cambiar de tarjeta,
+   ya que cada plan tiene distinto largo de texto. */
+.pricing-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* El theme deja la tarjeta sin padding izquierdo/derecho (0 en el
+   original), el texto queda pegado a los bordes. */
+.pricing-wrapper {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.pricing-menu {
+  flex-grow: 1;
+  padding-left: 0;
+}
+
+.pricing-wrapper.active {
+  position: relative;
+  border-top: 3px solid #a9842f;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -1px;
+  right: 24px;
+  background: #a9842f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 0 0 6px 6px;
+}
+
+/* Carrusel de planes */
+.pricing-carousel {
+  padding: 0 70px;
+}
+
+.pricing-slide {
+  max-width: 420px;
+  min-height: 560px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 52px;
+  height: 52px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #1d4e89;
+  opacity: 1;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #153a66;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.carousel-indicators {
+  position: static;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: #a9842f;
+}
+
+@media (max-width: 575px) {
+  .pricing-carousel {
+    padding: 0 45px;
+  }
+
+  .pricing-slide {
+    min-height: 620px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
 }
